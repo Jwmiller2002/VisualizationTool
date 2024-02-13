@@ -3,6 +3,9 @@
 //Deltatime
 float dt, prevTime = 0;
 
+//Scenes
+SceneTitle sceneTitle;
+
 //Inputs
 boolean leftMouseHeld = false;
 boolean leftMouseClick = false;
@@ -11,9 +14,14 @@ boolean prevLeftMouseClick = false;
 void setup() {
   size(1280, 720, P2D);
   frameRate(60);
+  switchToTitle();
 }
 void draw() {
   calcDeltaTime();
+  if (sceneTitle != null) {
+    sceneTitle.update();
+    if (sceneTitle != null) sceneTitle.draw();
+  }
 }
 
 // --- START DELTA TIME ---
@@ -33,3 +41,9 @@ void mouseReleased() {
 }
 
 // --- END INPUTS
+
+// --- START SCENES ---
+void switchToTitle() {
+  sceneTitle = new SceneTitle();
+}
+// --- END SCENES ---
