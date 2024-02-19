@@ -10,6 +10,10 @@ class SceneLearn {
   Button minusAssignButton;
   Button divideAssignButton;
   Button multiplyAssignButton;
+  Button moduloButton;
+  Button notButton;
+  Button andButton;
+  Button orButton;
   String title = "ADDITION";
 
   SceneLearn() {
@@ -24,6 +28,10 @@ class SceneLearn {
     minusAssignButton = new Button(50, 495, 50, 50, "-=");
     divideAssignButton = new Button(50, 555, 50, 50, "/=");
     multiplyAssignButton = new Button(50, 615, 50, 50, "*=");
+    moduloButton = new Button(110, 75, 50, 50, "%");
+    notButton = new Button(110, 135, 50, 50, "!");
+    andButton = new Button(110, 195, 50, 50, "&&");
+    orButton = new Button(110, 255, 50, 50, "||");
     addExplain();
   }
 
@@ -39,6 +47,10 @@ class SceneLearn {
     minusAssignButton.update();
     divideAssignButton.update();
     multiplyAssignButton.update();
+    moduloButton.update();
+    notButton.update();
+    andButton.update();
+    orButton.update();
     if (addButton.isPressed) addExplain();
     if (minusButton.isPressed) minusExplain();
     if (divideButton.isPressed) divideExplain();
@@ -49,6 +61,10 @@ class SceneLearn {
     if (minusAssignButton.isPressed) minusAssignExplain();
     if (divideAssignButton.isPressed) divideAssignExplain();
     if (multiplyAssignButton.isPressed) multiplyAssignExplain();
+    if (moduloButton.isPressed) moduloExplain();
+    if (notButton.isPressed) notExplain();
+    if (andButton.isPressed) andExplain();
+    if (orButton.isPressed) orExplain();
     if (backButton.isPressed) switchToTitle();
   }
 
@@ -73,6 +89,10 @@ class SceneLearn {
     minusAssignButton.draw();
     divideAssignButton.draw();
     multiplyAssignButton.draw();
+    moduloButton.draw();
+    notButton.draw();
+    andButton.draw();
+    orButton.draw();
   }
 
   void addExplain() {
@@ -104,5 +124,17 @@ class SceneLearn {
   }
   void multiplyAssignExplain() {
     title = "MULTIPLY ASSIGN";
+  }
+  void moduloExplain() {
+    title = "MODULO";
+  }
+  void notExplain() {
+    title = "LOGICAL NOT";
+  }
+  void andExplain() {
+    title = "LOGICAL AND";
+  }
+  void orExplain() {
+    title = "LOGICAL OR";
   }
 }
