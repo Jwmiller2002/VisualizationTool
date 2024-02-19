@@ -14,6 +14,12 @@ class SceneLearn {
   Button notButton;
   Button andButton;
   Button orButton;
+  Button condButton;
+  Button equalButton;
+  Button lessButton;
+  Button greatButton;
+  Button lessEqualButton;
+  Button greatEqualButton;
   String title = "ADDITION";
 
   SceneLearn() {
@@ -32,6 +38,12 @@ class SceneLearn {
     notButton = new Button(110, 135, 50, 50, "!");
     andButton = new Button(110, 195, 50, 50, "&&");
     orButton = new Button(110, 255, 50, 50, "||");
+    condButton = new Button(110, 315, 50, 50, "?:");
+    equalButton = new Button(110, 375, 50, 50, "==");
+    lessButton = new Button(110, 435, 50, 50, "<");
+    greatButton = new Button(110, 495, 50, 50, ">");
+    lessEqualButton = new Button(110, 555, 50, 50, "<=");
+    greatEqualButton = new Button(110, 615, 50, 50, ">=");
     addExplain();
   }
 
@@ -51,6 +63,12 @@ class SceneLearn {
     notButton.update();
     andButton.update();
     orButton.update();
+    condButton.update();
+    equalButton.update();
+    lessButton.update();
+    greatButton.update();
+    lessEqualButton.update();
+    greatEqualButton.update();
     if (addButton.isPressed) addExplain();
     if (minusButton.isPressed) minusExplain();
     if (divideButton.isPressed) divideExplain();
@@ -65,6 +83,12 @@ class SceneLearn {
     if (notButton.isPressed) notExplain();
     if (andButton.isPressed) andExplain();
     if (orButton.isPressed) orExplain();
+    if (condButton.isPressed) condExplain();
+    if (equalButton.isPressed) equalExplain();
+    if (lessButton.isPressed) lessExplain();
+    if (greatButton.isPressed) greatExplain();
+    if (lessEqualButton.isPressed) lessEqualExplain();
+    if (greatEqualButton.isPressed) greatEqualExplain();
     if (backButton.isPressed) switchToTitle();
   }
 
@@ -72,7 +96,7 @@ class SceneLearn {
     background(100);
     fill(0);
     textAlign(CENTER, CENTER);
-    textSize(75);
+    textSize(60);
     text(title, width/2, 75);
     stroke(0);
     strokeWeight(3);
@@ -93,6 +117,12 @@ class SceneLearn {
     notButton.draw();
     andButton.draw();
     orButton.draw();
+    condButton.draw();
+    equalButton.draw();
+    lessButton.draw();
+    greatButton.draw();
+    lessEqualButton.draw();
+    greatEqualButton.draw();
   }
 
   void addExplain() {
@@ -136,5 +166,23 @@ class SceneLearn {
   }
   void orExplain() {
     title = "LOGICAL OR";
+  }
+  void condExplain() {
+    title = "CONDITIONAL";
+  }
+  void equalExplain() {
+    title = "EQUALITY";
+  }
+  void lessExplain() {
+    title = "LESS THAN";
+  }
+  void greatExplain() {
+    title = "GREATER THAN";
+  }
+  void lessEqualExplain() {
+    title = "LESS THAN OR EQUAL TO";
+  }
+  void greatEqualExplain() {
+    title = "GREATER THAN OR EQUAL TO";
   }
 }
