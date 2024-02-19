@@ -1,6 +1,7 @@
 class ScenePlay {
 
   ScenePlay() {
+    
   }
   void update() {
   }
