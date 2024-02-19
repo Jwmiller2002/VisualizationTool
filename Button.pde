@@ -14,6 +14,7 @@ class Button {
   }
 
   void update() {
+    isPressed = false;
     if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
       isHovered = true;
     } else {
@@ -27,7 +28,7 @@ class Button {
   }
 
   void draw() {
-    if(!isHovered) fill(255);
+    if (!isHovered) fill(255);
     else fill(200);
     stroke(0);
     strokeWeight(3);

@@ -6,6 +6,7 @@ float dt, prevTime = 0;
 //Scenes
 SceneTitle sceneTitle;
 SceneLearn sceneLearn;
+ScenePlay scenePlay;
 
 //Inputs
 boolean leftMouseHeld = false;
@@ -25,6 +26,9 @@ void draw() {
   } else if (sceneLearn != null) {
     sceneLearn.update();
     if (sceneLearn != null) sceneLearn.draw();
+  } else if (scenePlay != null) {
+    scenePlay.update();
+    if (scenePlay != null) scenePlay.draw();
   }
 }
 
@@ -50,9 +54,16 @@ void mouseReleased() {
 void switchToTitle() {
   sceneTitle = new SceneTitle();
   sceneLearn = null;
+  scenePlay = null;
 }
 void switchToLearn() {
   sceneTitle = null;
   sceneLearn = new SceneLearn();
+  scenePlay = null;
+}
+void switchToPlay() {
+  sceneTitle = null;
+  sceneLearn = null;
+  scenePlay = new ScenePlay();
 }
 // --- END SCENES ---
