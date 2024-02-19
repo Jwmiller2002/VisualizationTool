@@ -23,8 +23,8 @@ class SceneTitle {
     }
   }
   void draw() {
-    background(100);
-    fill(0);
+    background(0);
+    fill(255);
     textAlign(CENTER, CENTER);
     textSize(75);
     text("OPERATORS", width/2, 75);

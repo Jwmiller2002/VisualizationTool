@@ -93,14 +93,14 @@ class SceneLearn {
   }
 
   void draw() {
-    background(100);
-    fill(0);
+    background(0);
+    fill(255);
     textAlign(CENTER, CENTER);
     textSize(60);
     text(title, width/2, 75);
-    stroke(0);
+    stroke(255);
     strokeWeight(3);
-    fill(250);
+    fill(50);
     rect(300, 150, 680, 400, 3);
     backButton.draw();
     addButton.draw();

@@ -28,12 +28,12 @@ class Button {
   }
 
   void draw() {
-    if (!isHovered) fill(255);
-    else fill(200);
-    stroke(0);
+    if (!isHovered) fill(0);
+    else fill(50);
+    stroke(255);
     strokeWeight(3);
-    rect(x, y, w, h, 5);
-    fill(0);
+    rect(x, y, w, h, 3);
+    fill(255);
     textAlign(CENTER, CENTER);
     textSize(40);
     text(buttonName, x + (w/2), y + (h/2));
