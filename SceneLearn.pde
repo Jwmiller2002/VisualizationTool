@@ -191,50 +191,51 @@ class SceneLearn {
   void moduloExplain() {
     title = "MODULO";
     explain = "Calculates the remainder when one value\nis divided by another";
-     example = "";
+     example = "//Sets a to 3\n int a = 27%6";
   }
   void notExplain() {
     title = "LOGICAL NOT";
     explain = "Inverts a boolean expression\nReturn false if true and return true if false";
-     example = "";
+     example = "//Sets a to false\nboolean a = false;\na=!a;";
   }
   void andExplain() {
     title = "LOGICAL AND";
     explain = "Compares two expressions and returns true\nonly if both are true";
+    example = "//Prints ''Hello World'' if true\n int a = 10; \nboolean b = false;\nif(a < 20 && !b){ println(''Hello World'');}\nHellow World";
   }
   void orExplain() {
     title = "LOGICAL OR";
     explain = "Compares two expressions and returns true\nif one or both are true";
-     example = "";
+     example = "//Prints ''Hello World'' if true\n int a = 20; \nboolean b = false;\nif(a >= 20 || b){ println(''Hello World'');}\nHellow World";
   }
   void condExplain() {
     title = "CONDITIONAL";
     explain = "A short cut for writing an IF and ELSE statement";
-     example = "";
+     example = "result = test ? expression1 : expression2\n//This is the equivalent the above structure\nif(test){result = expression1}\nelse{result = expression2} ";
   }
   void equalExplain() {
     title = "EQUALITY";
     explain = "Check is two values are the same\nPlease note that this is different\nfrom the assignment operator(=)";
-     example = "";
+     example = "//Prints ''Hello World'' if true\n int a = 23;\nint b = 23;\nif(a == b){println(''Hello World'');}\nHello World";
   }
   void lessExplain() {
     title = "LESS THAN";
     explain = "Checks if one value is smaller then another";
-     example = "";
+     example = "//Prints ''Hello World'' if true\n int a = 2;\nint b = 10;\nif(a < b){println(''Hello World'');}\nHello World";
   }
   void greatExplain() {
     title = "GREATER THAN";
     explain = "Checks if one value is larger then another";
-     example = "";
+     example = "//Prints ''Hello World'' if true\n int a = 35;\nint b = 15;\nif(a > b){println(''Hello World'');}\nHello World";
   }
   void lessEqualExplain() {
     title = "LESS THAN OR EQUAL TO";
     explain = "Checks if one value is smaller or equal to then another";
-     example = "";
+     example = "//Prints ''Hello World'' if true\n int a = 16;\nint b = 16;\nif(a <= b){println(''Hello World'');}\nHello World";
   }
   void greatEqualExplain() {
     title = "GREATER THAN OR EQUAL TO";
     explain = "Checks if one value is larger or equal to then another";
-     example = "";
+     example = "//Prints ''Hello World'' if true\n int a = 42;\nint b = 12;\nif(a >= b){println(''Hello World'');}\nHello World";
   }
 }
