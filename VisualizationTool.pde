@@ -13,9 +13,14 @@ boolean leftMouseHeld = false;
 boolean leftMouseClick = false;
 boolean prevLeftMouseClick = false;
 
+//Fonts
+PFont anta;
+
 void setup() {
   size(1280, 720, P2D);
+  anta = createFont("Anta-Regular.ttf",64);
   frameRate(60);
+  textFont(anta);
   switchToTitle();
 }
 void draw() {
