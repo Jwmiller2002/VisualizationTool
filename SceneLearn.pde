@@ -171,28 +171,32 @@ class SceneLearn {
   void addAssignExplain() {
     title = "ADD ASSIGN";
     explain = "Combines addition and assignment into one operator";
-    example = "//Set a to 34\nint a = 12;\nint b = 22;\na += b;";
+    example = "//Set a to 34\nint a = 12;\na += 22;";
   }
   void minusAssignExplain() {
     title = "SUBTRACT ASSIGN";
     explain = "Combines subtraction and assignment into one operator";
+    example = "//Sets a to 3\nint a = 13;\n a -= 10;";
   }
   void divideAssignExplain() {
     title = "DIVIDE ASSIGN";
     explain = "Combines division and assignment into one operator";
+     example = "//sets a to 12\nint a = 24;\na /= 2;";
   }
   void multiplyAssignExplain() {
     title = "MULTIPLY ASSIGN";
     explain = "Combines multiplication and assignment\ninto one operator";
+     example = "//sets a to 52\nint a = 13;\na *= 4;";
   }
   void moduloExplain() {
     title = "MODULO";
     explain = "Calculates the remainder when one value\nis divided by another";
-    
+     example = "";
   }
   void notExplain() {
     title = "LOGICAL NOT";
     explain = "Inverts a boolean expression\nReturn false if true and return true if false";
+     example = "";
   }
   void andExplain() {
     title = "LOGICAL AND";
@@ -201,29 +205,36 @@ class SceneLearn {
   void orExplain() {
     title = "LOGICAL OR";
     explain = "Compares two expressions and returns true\nif one or both are true";
+     example = "";
   }
   void condExplain() {
     title = "CONDITIONAL";
     explain = "A short cut for writing an IF and ELSE statement";
+     example = "";
   }
   void equalExplain() {
     title = "EQUALITY";
     explain = "Check is two values are the same\nPlease note that this is different\nfrom the assignment operator(=)";
+     example = "";
   }
   void lessExplain() {
     title = "LESS THAN";
     explain = "Checks if one value is smaller then another";
+     example = "";
   }
   void greatExplain() {
     title = "GREATER THAN";
     explain = "Checks if one value is larger then another";
+     example = "";
   }
   void lessEqualExplain() {
     title = "LESS THAN OR EQUAL TO";
     explain = "Checks if one value is smaller or equal to then another";
+     example = "";
   }
   void greatEqualExplain() {
     title = "GREATER THAN OR EQUAL TO";
     explain = "Checks if one value is larger or equal to then another";
+     example = "";
   }
 }
