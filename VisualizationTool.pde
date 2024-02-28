@@ -8,6 +8,7 @@ SceneTitle sceneTitle;
 SceneLearn sceneLearn;
 ScenePlay scenePlay;
 SceneGameOver sceneGameOver;
+SceneExplain sceneExplain;
 
 //Inputs
 boolean leftMouseHeld = false;
@@ -38,6 +39,9 @@ void draw() {
   } else if (sceneGameOver != null) {
     sceneGameOver.update();
     if (sceneGameOver != null) sceneGameOver.draw();
+  } else if (sceneExplain != null) {
+    sceneExplain.update();
+    if (sceneExplain !=null) sceneExplain.draw();
   }
 }
 
@@ -65,23 +69,34 @@ void switchToTitle() {
   sceneLearn = null;
   scenePlay = null;
   sceneGameOver = null;
+  sceneExplain = null;
 }
 void switchToLearn(String prevScreen) {
   sceneTitle = null;
   sceneLearn = new SceneLearn(prevScreen);
   scenePlay = null;
   sceneGameOver = null;
+  sceneExplain = null;
 }
 void switchToPlay() {
   sceneTitle = null;
   sceneLearn = null;
   scenePlay = new ScenePlay();
   sceneGameOver = null;
+  sceneExplain = null;
 }
 void switchToGameOver() {
   sceneTitle = null;
   sceneLearn = null;
   scenePlay = null;
   sceneGameOver = new SceneGameOver();
+  sceneExplain = null;
+}
+void switchToExplain(String name) {
+  sceneTitle = new SceneTitle();
+  sceneLearn = null;
+  scenePlay = null;
+  sceneGameOver = null;
+  sceneExplain = new SceneExplain(name);
 }
 // --- END SCENES ---
