@@ -293,6 +293,18 @@ class SceneExplain {
       text ("float a = ", (width/2) - 100, 150);
       text("a /= " + b + ";", width/2, 230);
       text("a = " + c + ";", width/2, 305);
+    } else if (explain == "mod") {
+      title = "MODULO";    
+      numY = 275;
+      numButton = null;
+      numButton = new Button(550, numY, 75, 75, input);
+      numButton.draw();
+      b = 3;
+      c = a % b;
+      fill(255);
+      textAlign(LEFT, CENTER);
+      textSize(50);
+      text(" % "+b + " = " + c, width/2, 300);
     } else {
       delay(100);
       switchToLearn(prevScene);
