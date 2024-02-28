@@ -9,6 +9,7 @@ SceneLearn sceneLearn;
 ScenePlay scenePlay;
 SceneGameOver sceneGameOver;
 SceneExplain sceneExplain;
+String prevScene;
 
 //Inputs
 boolean leftMouseHeld = false;
@@ -65,6 +66,7 @@ void mouseReleased() {
 
 // --- START SCENES ---
 void switchToTitle() {
+  prevScene = "Title";
   sceneTitle = new SceneTitle();
   sceneLearn = null;
   scenePlay = null;
@@ -79,6 +81,7 @@ void switchToLearn(String prevScreen) {
   sceneExplain = null;
 }
 void switchToPlay() {
+  prevScene = "Game";
   sceneTitle = null;
   sceneLearn = null;
   scenePlay = new ScenePlay();
@@ -93,7 +96,7 @@ void switchToGameOver() {
   sceneExplain = null;
 }
 void switchToExplain(String name) {
-  sceneTitle = new SceneTitle();
+  sceneTitle = null;
   sceneLearn = null;
   scenePlay = null;
   sceneGameOver = null;

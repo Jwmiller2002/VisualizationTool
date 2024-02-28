@@ -1,5 +1,6 @@
 class SceneLearn {
   Button backButton;
+  Button explainButton;
   Button addButton;
   Button minusButton;
   Button divideButton;
@@ -29,6 +30,7 @@ class SceneLearn {
 
   SceneLearn(String previousScreen) {
     backButton = new Button(width/2-(250/2), 600, 250, 100, "BACK");
+    explainButton = new Button(1000, 475,250,100, "TRY IT");
     addButton = new Button(50, 75, 50, 50, "+");
     minusButton = new Button(50, 135, 50, 50, "-");
     divideButton = new Button(50, 195, 50, 50, "/");
@@ -56,6 +58,7 @@ class SceneLearn {
   void update() {
     //Button Update Functions
     backButton.update();
+    explainButton.update();
     addButton.update();
     minusButton.update();
     divideButton.update();
@@ -97,6 +100,7 @@ class SceneLearn {
     if (greatButton.isPressed) greatExplain();
     if (lessEqualButton.isPressed) lessEqualExplain();
     if (greatEqualButton.isPressed) greatEqualExplain();
+    if (explainButton.isPressed) switchToExplain(name);
     if (backButton.isPressed) {
       if (prevScreen == "Title") {
         switchToTitle();
@@ -125,6 +129,7 @@ class SceneLearn {
     text(example, width/2, 400);
     //Draw Buttons
     backButton.draw();
+    explainButton.draw();
     addButton.draw();
     minusButton.draw();
     divideButton.draw();
