@@ -23,9 +23,10 @@ class SceneLearn {
   String title;
   String explain;
   String example;
-  
+  String prevScreen;
 
-  SceneLearn() {
+
+  SceneLearn(String previousScreen) {
     backButton = new Button(width/2-(250/2), 600, 250, 100, "BACK");
     addButton = new Button(50, 75, 50, 50, "+");
     minusButton = new Button(50, 135, 50, 50, "-");
@@ -48,6 +49,7 @@ class SceneLearn {
     lessEqualButton = new Button(110, 555, 50, 50, "<=");
     greatEqualButton = new Button(110, 615, 50, 50, ">=");
     addExplain();
+    prevScreen = previousScreen;
   }
 
   void update() {
@@ -94,7 +96,14 @@ class SceneLearn {
     if (greatButton.isPressed) greatExplain();
     if (lessEqualButton.isPressed) lessEqualExplain();
     if (greatEqualButton.isPressed) greatEqualExplain();
-    if (backButton.isPressed) switchToTitle();
+    if (backButton.isPressed) {
+      if (prevScreen == "Title") {
+        switchToTitle();
+      }
+      if (prevScreen == "Game") {
+        switchToPlay();
+      }
+    }
   }
 
   void draw() {
@@ -110,9 +119,9 @@ class SceneLearn {
     textSize(25);
     fill(255);
     textAlign(CENTER);
-    text(explain,width/2, 200);
-    text("EXAMPLES",width/2, 350);
-    text(example,width/2,400);
+    text(explain, width/2, 200);
+    text("EXAMPLES", width/2, 350);
+    text(example, width/2, 400);
     //Draw Buttons
     backButton.draw();
     addButton.draw();
@@ -141,7 +150,6 @@ class SceneLearn {
     title = "ADDITION";
     explain = "Calculate the sum of two values or\ncombines two strings into one";
     example = "//Sets a to 20\nint a = 15 + 5;\n//Prints the string ''Operator1234''\nint i = 1234;\nprint(''Operator'' + i);";
-    
   }
   void minusExplain() {
     title = "MINUS";
@@ -151,7 +159,7 @@ class SceneLearn {
   void divideExplain() {
     title = "DIVIDE";
     explain = "Divides one value from another";
-    example = "//Sets a to 5\nint a = 20/4;"; 
+    example = "//Sets a to 5\nint a = 20/4;";
   }
   void multiplyExplain() {
     title = "MULTIPLY";
@@ -181,22 +189,22 @@ class SceneLearn {
   void divideAssignExplain() {
     title = "DIVIDE ASSIGN";
     explain = "Combines division and assignment into one operator";
-     example = "//sets a to 12\nint a = 24;\na /= 2;";
+    example = "//sets a to 12\nint a = 24;\na /= 2;";
   }
   void multiplyAssignExplain() {
     title = "MULTIPLY ASSIGN";
     explain = "Combines multiplication and assignment\ninto one operator";
-     example = "//sets a to 52\nint a = 13;\na *= 4;";
+    example = "//sets a to 52\nint a = 13;\na *= 4;";
   }
   void moduloExplain() {
     title = "MODULO";
     explain = "Calculates the remainder when one value\nis divided by another";
-     example = "//Sets a to 3\n int a = 27%6";
+    example = "//Sets a to 3\n int a = 27%6";
   }
   void notExplain() {
     title = "LOGICAL NOT";
     explain = "Inverts a boolean expression\nReturn false if true and return true if false";
-     example = "//Sets a to false\nboolean a = false;\na=!a;";
+    example = "//Sets a to false\nboolean a = false;\na=!a;";
   }
   void andExplain() {
     title = "LOGICAL AND";
@@ -206,36 +214,36 @@ class SceneLearn {
   void orExplain() {
     title = "LOGICAL OR";
     explain = "Compares two expressions and returns true\nif one or both are true";
-     example = "//Prints ''Hello World'' if true\n int a = 20; \nboolean b = false;\nif(a >= 20 || b){ println(''Hello World'');}\nHellow World";
+    example = "//Prints ''Hello World'' if true\n int a = 20; \nboolean b = false;\nif(a >= 20 || b){ println(''Hello World'');}\nHellow World";
   }
   void condExplain() {
     title = "CONDITIONAL";
     explain = "A short cut for writing an IF and ELSE statement";
-     example = "result = test ? expression1 : expression2\n//This is the equivalent the above structure\nif(test){result = expression1}\nelse{result = expression2} ";
+    example = "result = test ? expression1 : expression2\n//This is the equivalent the above structure\nif(test){result = expression1}\nelse{result = expression2} ";
   }
   void equalExplain() {
     title = "EQUALITY";
     explain = "Check is two values are the same\nPlease note that this is different\nfrom the assignment operator(=)";
-     example = "//Prints ''Hello World'' if true\n int a = 23;\nint b = 23;\nif(a == b){println(''Hello World'');}\nHello World";
+    example = "//Prints ''Hello World'' if true\n int a = 23;\nint b = 23;\nif(a == b){println(''Hello World'');}\nHello World";
   }
   void lessExplain() {
     title = "LESS THAN";
     explain = "Checks if one value is smaller then another";
-     example = "//Prints ''Hello World'' if true\n int a = 2;\nint b = 10;\nif(a < b){println(''Hello World'');}\nHello World";
+    example = "//Prints ''Hello World'' if true\n int a = 2;\nint b = 10;\nif(a < b){println(''Hello World'');}\nHello World";
   }
   void greatExplain() {
     title = "GREATER THAN";
     explain = "Checks if one value is larger then another";
-     example = "//Prints ''Hello World'' if true\n int a = 35;\nint b = 15;\nif(a > b){println(''Hello World'');}\nHello World";
+    example = "//Prints ''Hello World'' if true\n int a = 35;\nint b = 15;\nif(a > b){println(''Hello World'');}\nHello World";
   }
   void lessEqualExplain() {
     title = "LESS THAN OR EQUAL TO";
     explain = "Checks if one value is smaller or equal to then another";
-     example = "//Prints ''Hello World'' if true\n int a = 16;\nint b = 16;\nif(a <= b){println(''Hello World'');}\nHello World";
+    example = "//Prints ''Hello World'' if true\n int a = 16;\nint b = 16;\nif(a <= b){println(''Hello World'');}\nHello World";
   }
   void greatEqualExplain() {
     title = "GREATER THAN OR EQUAL TO";
     explain = "Checks if one value is larger or equal to then another";
-     example = "//Prints ''Hello World'' if true\n int a = 42;\nint b = 12;\nif(a >= b){println(''Hello World'');}\nHello World";
+    example = "//Prints ''Hello World'' if true\n int a = 42;\nint b = 12;\nif(a >= b){println(''Hello World'');}\nHello World";
   }
 }

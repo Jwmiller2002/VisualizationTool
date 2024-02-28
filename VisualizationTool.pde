@@ -61,9 +61,9 @@ void switchToTitle() {
   sceneLearn = null;
   scenePlay = null;
 }
-void switchToLearn() {
+void switchToLearn(String prevScreen) {
   sceneTitle = null;
-  sceneLearn = new SceneLearn();
+  sceneLearn = new SceneLearn(prevScreen);
   scenePlay = null;
 }
 void switchToPlay() {

@@ -16,7 +16,7 @@ class SceneTitle {
       switchToPlay();
     }
     if (learnButton.isPressed) {
-      switchToLearn();
+      switchToLearn("Title");
     }
     if (quitButton.isPressed) {
       exit();

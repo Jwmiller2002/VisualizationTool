@@ -5,6 +5,7 @@ class ScenePlay {
   float nextTimer;
   boolean testedProblem = false;
   Button testButton;
+  Button learnButton;
   // 0 = 3 Math Problem
   float a;
   float b;
@@ -19,12 +20,13 @@ class ScenePlay {
   Button modButton;
   boolean threePressed = false;
   String input = " ";
-  // 1 = 2 Math Problem
-  // 2 = If Problem 
+  // 1 = If Problem 
+  
   ScenePlay() {
     newProblem();
     threeButton = new Button((width/2)-120, 365, 75, 75, input);
     testButton = new Button(35, 100, 150, 85, "TEST");
+    learnButton = new Button(1075,100,150,85, "LEARN");
     plusButton = new Button(350, 510, 75, 75, "+");
     minusButton = new Button(435, 510, 75, 75, "-");
     divideButton = new Button(520, 510, 75, 75, "/");
@@ -33,7 +35,9 @@ class ScenePlay {
   }
   void update() {
     testButton.update();
+    learnButton.update();
     if (testButton.isPressed) testProblem();
+    if (learnButton.isPressed) switchToLearn("Game");
     if (testedProblem) {
       nextTimer -= dt;
       if (nextTimer <= 0) newProblem();
@@ -91,6 +95,7 @@ class ScenePlay {
     textSize(30);
     text("Score: " + score, 100, 50);
     testButton.draw();
+    learnButton.draw();
     if (problemType == 0) {
       textSize(50);
       fill(255);
