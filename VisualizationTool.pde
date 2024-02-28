@@ -7,6 +7,7 @@ float dt, prevTime = 0;
 SceneTitle sceneTitle;
 SceneLearn sceneLearn;
 ScenePlay scenePlay;
+SceneGameOver sceneGameOver;
 
 //Inputs
 boolean leftMouseHeld = false;
@@ -18,7 +19,7 @@ PFont anta;
 
 void setup() {
   size(1280, 720, P2D);
-  anta = createFont("Anta-Regular.ttf",64);
+  anta = createFont("Anta-Regular.ttf", 64);
   frameRate(60);
   textFont(anta);
   switchToTitle();
@@ -34,6 +35,9 @@ void draw() {
   } else if (scenePlay != null) {
     scenePlay.update();
     if (scenePlay != null) scenePlay.draw();
+  } else if (sceneGameOver != null) {
+    sceneGameOver.update();
+    if (sceneGameOver != null) sceneGameOver.draw();
   }
 }
 
@@ -60,15 +64,24 @@ void switchToTitle() {
   sceneTitle = new SceneTitle();
   sceneLearn = null;
   scenePlay = null;
+  sceneGameOver = null;
 }
 void switchToLearn(String prevScreen) {
   sceneTitle = null;
   sceneLearn = new SceneLearn(prevScreen);
   scenePlay = null;
+  sceneGameOver = null;
 }
 void switchToPlay() {
   sceneTitle = null;
   sceneLearn = null;
   scenePlay = new ScenePlay();
+  sceneGameOver = null;
+}
+void switchToGameOver() {
+  sceneTitle = null;
+  sceneLearn = null;
+  scenePlay = null;
+  sceneGameOver = new SceneGameOver();
 }
 // --- END SCENES ---

@@ -59,6 +59,7 @@ class ScenePlay {
       nextTimer -= dt;
       if (nextTimer <= 0) newProblem();
     }
+    if (score < -1) switchToGameOver();
     if (problemType == 0) {
       threeButton.update();
       if (threeButton.isPressed) threePressed = true;
@@ -201,11 +202,11 @@ class ScenePlay {
       fill(255);
       textAlign(CENTER, CENTER);
       text("Make this statement print ''Hello World''", width/2, 100);
-      text("float a = " + a, width/2, 200);
-      text("float b = " + b, width/2, 250);
+      text("float a = " + a +";", width/2, 200);
+      text("float b = " + b + ";", width/2, 250);
       text("If (a ", (width/2)-180, 350 );
       textAlign(LEFT, CENTER);
-      text(" b){ println(''Hello World'') }", (width/2)- 40, 350);
+      text(" b){ println(''Hello World''); }", (width/2)- 40, 350);
       if (ifPressed) {
         stroke(255);
         strokeWeight(3);
