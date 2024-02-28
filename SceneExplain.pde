@@ -5,6 +5,7 @@ class SceneExplain {
   float a = 0;
   float b;
   float c;
+  float numY = 275;
   boolean numIsPressed = false;
   Button numButton;
   Button backButton;
@@ -21,7 +22,7 @@ class SceneExplain {
 
   SceneExplain(String name) {
     explain = name;
-    numButton = new Button(550, 275, 75, 75, input);
+    numButton = new Button(550, numY, 75, 75, input);
     backButton = new Button(width/2-(250/2), 600, 250, 100, "BACK");
     zeroButton = new Button(467, 390, 75, 75, "0");
     oneButton = new Button(557, 390, 75, 75, "1");
@@ -58,7 +59,7 @@ class SceneExplain {
         a = 0;
         input = "0";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -67,7 +68,7 @@ class SceneExplain {
         a = 1;
         input = "1";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -76,7 +77,7 @@ class SceneExplain {
         a = 2;
         input = "2";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -85,7 +86,7 @@ class SceneExplain {
         a = 3;
         input = "3";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -94,7 +95,7 @@ class SceneExplain {
         a = 4;
         input = "4";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -103,7 +104,7 @@ class SceneExplain {
         a = 5;
         input = "5";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -112,7 +113,7 @@ class SceneExplain {
         a = 6;
         input = "6";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -121,7 +122,7 @@ class SceneExplain {
         a = 7;
         input = "7";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1;
         if (explain == "decre") c = a - 1;
       }
@@ -130,7 +131,7 @@ class SceneExplain {
         a = 8;
         input = "8";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a+1 ;
         if (explain == "decre") c = a - 1;
       }
@@ -139,7 +140,7 @@ class SceneExplain {
         a = 9;
         input = "9";
         numButton = null;
-        numButton = new Button(550, 275, 75, 75, input);
+        numButton = new Button(550, numY, 75, 75, input);
         if (explain == "incre") c = a + 1;
         if (explain == "decre") c = a - 1;
       }
@@ -170,6 +171,9 @@ class SceneExplain {
     }
     if (explain == "add") {
       title = "ADDITION";
+      numY = 275;
+      numButton = null;
+      numButton = new Button(550, numY, 75, 75, input);
       numButton.draw();
       b = 5;
       c = a + b;
@@ -179,6 +183,9 @@ class SceneExplain {
       text(" + "+b + " = " + c, width/2, 300);
     } else if (explain == "minus") {
       title = "MINUS";
+      numY = 275;
+      numButton = null;
+      numButton = new Button(550, numY, 75, 75, input);
       numButton.draw();
       b = 5;
       c = a - b;
@@ -187,7 +194,10 @@ class SceneExplain {
       textSize(50);
       text(" - "+b + " = " + c, width/2, 300);
     } else if (explain == "divide") {
-      title = "DIVIDE";
+      title = "DIVIDE";    
+      numY = 275;
+      numButton = null;
+      numButton = new Button(550, numY, 75, 75, input);
       numButton.draw();
       b = 3;
       c = a / b;
@@ -197,6 +207,9 @@ class SceneExplain {
       text(" / "+b + " = " + c, width/2, 300);
     } else if (explain == "mult") {
       title = "MULTIPLY";
+      numY = 275;
+      numButton = null;
+      numButton = new Button(550, numY, 75, 75, input);
       numButton.draw();
       b = 5;
       c = a * b;
@@ -206,6 +219,9 @@ class SceneExplain {
       text(" * "+b + " = " + c, width/2, 300);
     } else if (explain == "incre") {
       title = "INCREMENT";
+      numY = 275;
+      numButton = null;
+      numButton = new Button(550, numY, 75, 75, input);
       numButton.draw();
       fill(255);
       textAlign(LEFT, CENTER);
@@ -213,11 +229,70 @@ class SceneExplain {
       text(" ++ = " + c, width/2, 300);
     } else if (explain == "decre") {
       title = "DECREMENT";
+      numY = 275;
+      numButton = null;
+      numButton = new Button(550, numY, 75, 75, input);
       numButton.draw();
       fill(255);
       textAlign(LEFT, CENTER);
       textSize(50);
       text(" -- = " + c, width/2, 300);
+    } else if (explain == "addAsign") {
+      title = "ADD ASSIGN";
+      numButton = null;
+      numY = 125;
+      numButton = new Button(550, numY, 75, 75, input);
+      numButton.draw();
+      b = 5;
+      c = a + b;
+      fill(255);
+      textSize(50);
+      textAlign(RIGHT, CENTER);
+      text ("float a = ", (width/2) - 100, 150);
+      text("a += " + b + ";", width/2, 230);
+      text("a = " + c + ";", width/2, 305);
+    } else if (explain == "subAsign") {
+      title = "SUBTRACT ASSIGN";
+      numButton = null;
+      numY = 125;
+      numButton = new Button(550, numY, 75, 75, input);
+      numButton.draw();
+      b = 5;
+      c = a - b;
+      fill(255);
+      textSize(50);
+      textAlign(RIGHT, CENTER);
+      text ("float a = ", (width/2) - 100, 150);
+      text("a -= " + b + ";", width/2, 230);
+      text("a = " + c + ";", width/2, 305);
+    } else if (explain == "divideAsign") {
+      title = "DIVIDE ASSIGN";
+      numButton = null;
+      numY = 125;
+      numButton = new Button(550, numY, 75, 75, input);
+      numButton.draw();
+      b = 3;
+      c = a / b;
+      fill(255);
+      textSize(50);
+      textAlign(RIGHT, CENTER);
+      text ("float a = ", (width/2) - 100, 150);
+      text("a /= " + b + ";", width/2, 230);
+      text("a = " + c + ";", width/2, 305);
+    } else if (explain == "multAsign") {
+      title = "MULTIPLY ASSIGN";
+      numButton = null;
+      numY = 125;
+      numButton = new Button(550, numY, 75, 75, input);
+      numButton.draw();
+      b = 3;
+      c = a / b;
+      fill(255);
+      textSize(50);
+      textAlign(RIGHT, CENTER);
+      text ("float a = ", (width/2) - 100, 150);
+      text("a /= " + b + ";", width/2, 230);
+      text("a = " + c + ";", width/2, 305);
     } else {
       delay(100);
       switchToLearn(prevScene);
