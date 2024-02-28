@@ -204,7 +204,7 @@ class SceneLearn {
   void notExplain() {
     title = "LOGICAL NOT";
     explain = "Inverts a boolean expression\nReturn false if true and return true if false";
-    example = "//Sets a to false\nboolean a = false;\na=!a;";
+    example = "//Sets a to true\nboolean a = false;\na=!a;";
   }
   void andExplain() {
     title = "LOGICAL AND";
