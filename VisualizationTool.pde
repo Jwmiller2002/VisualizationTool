@@ -19,6 +19,12 @@ boolean prevLeftMouseClick = false;
 //Fonts
 PFont anta;
 
+//CRITCS
+// Add Logical Explains
+// Change font for code in the learn tab
+// Move the Test button to bottom left in Game
+// Add Back Button where test was in Game
+
 void setup() {
   size(1280, 720, P2D);
   anta = createFont("Anta-Regular.ttf", 64);
