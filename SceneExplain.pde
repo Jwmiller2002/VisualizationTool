@@ -59,6 +59,8 @@ class SceneExplain {
         input = "0";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (oneButton.isPressed) {
         numIsPressed = false;
@@ -66,6 +68,8 @@ class SceneExplain {
         input = "1";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (twoButton.isPressed) {
         numIsPressed = false;
@@ -73,6 +77,8 @@ class SceneExplain {
         input = "2";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (threeButton.isPressed) {
         numIsPressed = false;
@@ -80,6 +86,8 @@ class SceneExplain {
         input = "3";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (fourButton.isPressed) {
         numIsPressed = false;
@@ -87,6 +95,8 @@ class SceneExplain {
         input = "4";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (fiveButton.isPressed) {
         numIsPressed = false;
@@ -94,6 +104,8 @@ class SceneExplain {
         input = "5";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (sixButton.isPressed) {
         numIsPressed = false;
@@ -101,6 +113,8 @@ class SceneExplain {
         input = "6";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (sevenButton.isPressed) {
         numIsPressed = false;
@@ -108,6 +122,8 @@ class SceneExplain {
         input = "7";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1;
+        if (explain == "decre") c = a - 1;
       }
       if (eightButton.isPressed) {
         numIsPressed = false;
@@ -115,6 +131,8 @@ class SceneExplain {
         input = "8";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a+1 ;
+        if (explain == "decre") c = a - 1;
       }
       if (nineButton.isPressed) {
         numIsPressed = false;
@@ -122,6 +140,8 @@ class SceneExplain {
         input = "9";
         numButton = null;
         numButton = new Button(550, 275, 75, 75, input);
+        if (explain == "incre") c = a + 1;
+        if (explain == "decre") c = a - 1;
       }
     }
   }
@@ -184,6 +204,23 @@ class SceneExplain {
       textAlign(LEFT, CENTER);
       textSize(50);
       text(" * "+b + " = " + c, width/2, 300);
+    } else if (explain == "incre") {
+      title = "INCREMENT";
+      numButton.draw();
+      fill(255);
+      textAlign(LEFT, CENTER);
+      textSize(50);
+      text(" ++ = " + c, width/2, 300);
+    } else if (explain == "decre") {
+      title = "DECREMENT";
+      numButton.draw();
+      fill(255);
+      textAlign(LEFT, CENTER);
+      textSize(50);
+      text(" -- = " + c, width/2, 300);
+    } else {
+      delay(100);
+      switchToLearn(prevScene);
     }
   }
 }
